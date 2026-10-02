@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Águas - Movimento Escalada Brasília</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        escalada: {
+                            deep: '#0B2545',
+                            dark: '#13385F',
+                            sky: '#0EA5E9',
+                            lightSky: '#38BDF8',
+                            accent: '#F59E0B',
+                            accentHover: '#D97706',
+                            surface: '#F8FAFC'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(11, 37, 69, 0.86) 0%, rgba(19, 56, 95, 0.78) 100%), center 55%/cover no-repeat;
+        }
+        .gold-glow {
+            box-shadow: 0 0 35px rgba(245, 158, 11, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Header / Navbar -->
+    <header id="navbar" class="sticky top-0 left-0 right-0 z-50 bg-escalada-deep/95 backdrop-blur-md shadow-lg border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <a href="#inicio" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-400 shadow-md group-hover:scale-105 transition-transform flex-shrink-0 bg-escalada-deep flex items-center justify-center">
+                        <i class="fa-solid fa-water text-amber-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="block font-heading font-bold text-white text-base sm:text-lg tracking-wider">GRUPO ÁGUAS</span>
+                        <span class="block text-xs font-medium text-sky-300 tracking-widest uppercase">Escalada Brasília</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-6 font-medium text-sm text-slate-200">
+                    <a href="#inicio" class="hover:text-amber-400 transition-colors">Início</a>
+                    <a href="#movimento" class="hover:text-amber-400 transition-colors">O Movimento</a>
+                    <a href="#historia" class="hover:text-amber-400 transition-colors">História</a>
+                    <a href="#grupo" class="hover:text-amber-400 transition-colors">O Grupo Águas</a>
+                    <a href="#encontros" class="hover:text-amber-400 transition-colors">Encontros</a>
+                    <a href="#galeria" class="hover:text-amber-400 transition-colors">Galeria</a>
+                    <a href="#arquidiocese" class="hover:text-amber-400 transition-colors">Arquidiocese</a>
+                    <a href="https://www.instagram.com/grupoaguas.meb/" target="_blank" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-4 py-2 rounded-full font-semibold shadow-md transition-all flex items-center gap-2">
+                        <i class="fa-brands fa-instagram"></i> Instagram
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" aria-label="Abrir Menu" class="lg:hidden text-white text-2xl p-2 focus:outline-none">
+                    <i class="fa-solid fa-bars" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-escalada-deep/98 border-t border-white/10 px-6 py-6 space-y-4 text-center shadow-2xl">
+            <a href="#inicio" class="block text-white hover:text-amber-400 text-lg font-medium mobile-link py-1">Início</a>
+            <a href="#movimento" class="block text-white hover:text-amber-400 text-lg font-medium mobile-link py-1">O Movimento</a>
+            <a href="#historia" class="block text-white hover:text-amber-400 text-lg font-medium mobile-link py-1">História</a>
+            <a href="#grupo" class="block text-white hover:text-amber-400 text-lg font-medium mobile-link py-1">O Grupo Águas</a>
+            <a href="#encontros" class="block text-white hover:text-amber-400 text-lg font-medium mobile-link py-1">Encontros</a>
+            <a href="#galeria" class="block text-white hover:text-amber-400 text-lg font-medium mobile-link py-1">Galeria</a>
+            <a href="#arquidiocese" class="block text-white hover:text-amber-400 text-lg font-medium mobile-link py-1">Arquidiocese</a>
+            <div class="pt-2">
+                <a href="https://www.instagram.com/grupoaguas.meb/" target="_blank" class="inline-flex items-center justify-center gap-2 w-full bg-amber-500 text-white px-5 py-3 rounded-xl font-semibold shadow-md">
+                    <i class="fa-brands fa-instagram"></i> Siga no Instagram
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative hero-gradient text-white py-24 sm:py-32 px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#38BDF8_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+        <div class="relative z-10 max-w-4xl mx-auto space-y-8">
+            <div class="mx-auto w-36 h-36 sm:w-44 sm:h-44 rounded-full bg-gradient-to-tr from-sky-700 via-sky-400 to-amber-400 p-1.5 shadow-2xl gold-glow flex items-center justify-center">
+                <div class="w-full h-full rounded-full bg-escalada-deep flex items-center justify-center">
+                    <i class="fa-solid fa-water text-sky-300 text-6xl sm:text-7xl"></i>
+                </div>
+            </div>
+
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-sky-200 px-5 py-2 rounded-full text-sm font-medium">
+                <i class="fa-solid fa-cross text-amber-400"></i> Movimento Escalada de Brasília
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
+                Escalamos às alturas à procura de <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300">um ideal!</span>
+            </h1>
+
+            <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
+                Bem-vindo ao <strong class="text-white font-semibold">Grupo Águas</strong>. Evangelização da juventude na fé, oração, alegria e fraternidade na Arquidiocese de Brasília.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <a href="#encontros" class="w-full sm:w-auto bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold px-8 py-4 rounded-full shadow-lg gold-glow text-base transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-calendar-days"></i> Conheça Nossos Encontros
+                </a>
+                <a href="#grupo" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-8 py-4 rounded-full backdrop-blur-md text-base transition-all">
+                    Sobre o Grupo Águas
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: O Movimento Escalada -->
+    <section id="movimento" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-sky-600 font-semibold tracking-wider uppercase text-sm">Espiritualidade e Juventude</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-escalada-deep">O que é o Movimento Escalada?</h2>
+                <div class="w-20 h-1.5 bg-amber-500 mx-auto rounded-full"></div>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    Um movimento de Igreja voltado para jovens, que propõe uma vivência profunda do Evangelho através do lema: <em class="text-escalada-deep font-medium">"Escalar as alturas à procura de um ideal"</em>.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow space-y-4">
+                    <div class="w-14 h-14 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-2xl font-bold">
+                        <i class="fa-solid fa-mountain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-escalada-deep">A Subida</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        A metáfora da montanha representa a nossa caminhada espiritual diária, superando obstáculos e buscando sempre a proximidade com Deus.
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow space-y-4">
+                    <div class="w-14 h-14 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl font-bold">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-escalada-deep">Fraternidade</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Ninguém sobe a montanha sozinho. A partilha, a amizade cristã e o apoio mútuo são pilares fundamentais da nossa comunidade jovem.
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow space-y-4">
+                    <div class="w-14 h-14 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-2xl font-bold">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-escalada-deep">Ideal de Vida</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Encontrar Jesus Cristo como o verdadeiro sentido e ideal supremo para transformar a nossa vida e a sociedade em que vivemos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: O Grupo Águas -->
+    <section id="grupo" class="py-20 px-4 sm:px-6 lg:px-8 bg-escalada-surface">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-amber-600 font-semibold tracking-wider uppercase text-sm">Nossa Identidade</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-escalada-deep">Quem é o Grupo Águas?</h2>
+                <div class="w-20 h-1.5 bg-amber-500 rounded-full"></div>
+                <p class="text-slate-700 leading-relaxed text-base sm:text-lg">
+                    O <strong>Grupo Águas</strong> é parte integrante do Movimento Escalada na Arquidiocese de Brasília. Inspirados pelas águas vivas que dessedentam e dão vida, formamos um ponto de encontro para jovens que desejam perseverar na fé, aprofundar a oração e partilhar momentos de verdadeira alegria cristã.
+                </p>
+                <div class="space-y-3 pt-2">
+                    <div class="flex items-center gap-3 text-slate-700">
+                        <i class="fa-solid fa-check-circle text-amber-500 text-lg"></i>
+                        <span>Reuniões semanais dinâmicas e formativas</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-slate-700">
+                        <i class="fa-solid fa-check-circle text-amber-500 text-lg"></i>
+                        <span>Momentos fortes de partilha e oração em comunidade</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-slate-700">
+                        <i class="fa-solid fa-check-circle text-amber-500 text-lg"></i>
+                        <span>Integração ativa com as diretrizes da Arquidiocese de Brasília</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-escalada-deep text-white p-8 sm:p-10 rounded-3xl shadow-xl border border-white/10 space-y-6 relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl text-sky-300">
+                    <i class="fa-solid fa-water"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-amber-400">Faça Parte da Nossa Família</h3>
+                <p class="text-slate-300 leading-relaxed">
+                    Se você já fez o Escalada ou deseja conhecer mais sobre o nosso carisma, as portas estão sempre abertas. Venha subir a montanha conosco!
+                </p>
+                <a href="https://www.instagram.com/grupoaguas.meb/" target="_blank" class="inline-flex items-center justify-center gap-2 w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-semibold py-3.5 px-6 rounded-xl shadow-md transition-all">
+                    <i class="fa-brands fa-instagram"></i> Entrar em Contato via Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Encontros -->
+    <section id="encontros" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-5xl mx-auto bg-gradient-to-br from-escalada-deep to-escalada-dark text-white rounded-3xl shadow-2xl p-8 sm:p-12 relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-8 opacity-10 text-8xl hidden sm:block">
+                <i class="fa-solid fa-calendar-days"></i>
+            </div>
+            <div class="relative z-10 space-y-6 max-w-2xl">
+                <span class="bg-amber-500/20 border border-amber-400/40 text-amber-300 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase">Agenda Semanal</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold">Nossos Encontros</h2>
+                <p class="text-slate-300 leading-relaxed text-base sm:text-lg">
+                    Reunimo-nos regularmente para fortalecer os laços de fraternidade e a nossa caminhada com Cristo.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                    <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10 space-y-1">
+                        <span class="text-sky-300 text-xs uppercase tracking-wider font-semibold">Quando</span>
+                        <p class="text-lg font-bold text-white">Quartas-feiras</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10 space-y-1">
+                        <span class="text-sky-300 text-xs uppercase tracking-wider font-semibold">Horário</span>
+                        <p class="text-lg font-bold text-white">19:30</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-escalada-deep text-slate-400 py-12 px-4 sm:px-6 lg:px-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full border border-amber-400 flex items-center justify-center text-amber-400">
+                    <i class="fa-solid fa-water"></i>
+                </div>
+                <div>
+                    <span class="block font-heading font-bold text-white text-sm">GRUPO ÁGUAS</span>
+                    <span class="block text-xs text-sky-300">Movimento Escalada • Brasília - DF</span>
+                </div>
+            </div>
+            <p class="text-xs text-slate-400">
+                © 2026 Grupo Águas - Escalada Brasília. Todos os direitos reservados.
+            </p>
+            <div class="flex items-center gap-4 text-xl">
+                <a href="https://www.instagram.com/grupoaguas.meb/" target="_blank" class="text-slate-300 hover:text-amber-400 transition-colors">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para abrir/fechar menu mobile -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+    </script>
+</body>
+</html>
